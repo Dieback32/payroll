@@ -13,7 +13,7 @@ class Dashboard extends CI_Controller
 
     function is_logged_in(){
         $logged_in = $this->session->userdata('logged_in');
-        if (!isset($logged_in) || $logged_in == false){
+        if (!isset($logged_in) || !$logged_in){
             redirect('login');
         }
     }
